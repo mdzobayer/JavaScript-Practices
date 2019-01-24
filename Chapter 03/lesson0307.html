@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Web page output</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Web page output</h1>
+
+<p id="message">start message</p>
+
+<script>
+var n = 42;
+var msg = n+" squared is "+(n*n);
+
+var p = document.getElementById("message");
+//p.textContent = "<em>" + msg + "</em>";   // Text Content Expects text Content
+p.innerHTML = "<em>" + msg + "</em>";
+
+document.write("<p>" + msg + "</p>"); // Should avoid document.write();
+//alert(msg); // Should avoid alert
+console.log(msg);
+console.debug(msg);
+console.error(msg);
+console.info(msg);
+
+
+</script>
+
+</body>
+</html>
